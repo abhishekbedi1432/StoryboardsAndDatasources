@@ -12,14 +12,14 @@ import Kingfisher
 class FeedCollectionViewDatasource:NSObject {
     
     private var collectionView:UICollectionView!
-    var willDisplayFooter:(() -> ())?
-    var OnItemSelection:((Feed) ->())?
-    
     var items:[Feed] = [] {
         didSet {
             self.collectionView?.reloadData()
         }
     }
+    
+    var willDisplayFooter:(() -> ())?   // to load more feeds
+    var OnItemSelection:((Feed) ->())?  // called when user selects any item.
     
     func configure(_ collectionView: UICollectionView, items:[Feed]) {
         self.collectionView = collectionView
