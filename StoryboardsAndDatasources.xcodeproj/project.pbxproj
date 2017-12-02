@@ -15,8 +15,12 @@
 		CF72C2C51FD2F78E0021DC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF72C2C31FD2F78E0021DC5A /* LaunchScreen.storyboard */; };
 		CF72C2D01FD2F78F0021DC5A /* StoryboardsAndDatasourcesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF72C2CF1FD2F78F0021DC5A /* StoryboardsAndDatasourcesTests.swift */; };
 		CF72C2DD1FD2F84D0021DC5A /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF72C2DA1FD2F84C0021DC5A /* APIHandler.swift */; };
-		CF72C2DE1FD2F84D0021DC5A /* Feed in Resources */ = {isa = PBXBuildFile; fileRef = CF72C2DB1FD2F84D0021DC5A /* Feed */; };
 		CF72C2DF1FD2F84D0021DC5A /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF72C2DC1FD2F84D0021DC5A /* NetworkHandler.swift */; };
+		CFD864621FD304DD00DD4975 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD8645D1FD304DC00DD4975 /* FeedViewController.swift */; };
+		CFD864631FD304DD00DD4975 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD8645E1FD304DD00DD4975 /* FeedCollectionViewCell.swift */; };
+		CFD864641FD304DD00DD4975 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD8645F1FD304DD00DD4975 /* Feed.swift */; };
+		CFD864651FD304DD00DD4975 /* FeedCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD864601FD304DD00DD4975 /* FeedCollectionViewFooter.swift */; };
+		CFD864661FD304DD00DD4975 /* FeedCollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD864611FD304DD00DD4975 /* FeedCollectionViewDatasource.swift */; };
 		FC1D149BC744375F8228C3A2 /* Pods_StoryboardsAndDatasourcesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B21CDDCBE747CF0227B8A8F /* Pods_StoryboardsAndDatasourcesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +52,12 @@
 		CF72C2CF1FD2F78F0021DC5A /* StoryboardsAndDatasourcesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsAndDatasourcesTests.swift; sourceTree = "<group>"; };
 		CF72C2D11FD2F78F0021DC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF72C2DA1FD2F84C0021DC5A /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		CF72C2DB1FD2F84D0021DC5A /* Feed */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Feed; sourceTree = "<group>"; };
 		CF72C2DC1FD2F84D0021DC5A /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		CFD8645D1FD304DC00DD4975 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		CFD8645E1FD304DD00DD4975 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		CFD8645F1FD304DD00DD4975 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		CFD864601FD304DD00DD4975 /* FeedCollectionViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewFooter.swift; sourceTree = "<group>"; };
+		CFD864611FD304DD00DD4975 /* FeedCollectionViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				CF72C2DA1FD2F84C0021DC5A /* APIHandler.swift */,
-				CF72C2DB1FD2F84D0021DC5A /* Feed */,
 				CF72C2DC1FD2F84D0021DC5A /* NetworkHandler.swift */,
 				CF72C2BA1FD2F78E0021DC5A /* AppDelegate.swift */,
 				CF72C2BC1FD2F78E0021DC5A /* ViewController.swift */,
+				CFD8645C1FD304AE00DD4975 /* Feeds Module */,
 				CF72C2BE1FD2F78E0021DC5A /* Main.storyboard */,
 				CF72C2C11FD2F78E0021DC5A /* Assets.xcassets */,
 				CF72C2C31FD2F78E0021DC5A /* LaunchScreen.storyboard */,
@@ -135,6 +143,18 @@
 				CF72C2D11FD2F78F0021DC5A /* Info.plist */,
 			);
 			path = StoryboardsAndDatasourcesTests;
+			sourceTree = "<group>";
+		};
+		CFD8645C1FD304AE00DD4975 /* Feeds Module */ = {
+			isa = PBXGroup;
+			children = (
+				CFD8645F1FD304DD00DD4975 /* Feed.swift */,
+				CFD8645E1FD304DD00DD4975 /* FeedCollectionViewCell.swift */,
+				CFD864611FD304DD00DD4975 /* FeedCollectionViewDatasource.swift */,
+				CFD864601FD304DD00DD4975 /* FeedCollectionViewFooter.swift */,
+				CFD8645D1FD304DC00DD4975 /* FeedViewController.swift */,
+			);
+			path = "Feeds Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF72C2DE1FD2F84D0021DC5A /* Feed in Resources */,
 				CF72C2C51FD2F78E0021DC5A /* LaunchScreen.storyboard in Resources */,
 				CF72C2C21FD2F78E0021DC5A /* Assets.xcassets in Resources */,
 				CF72C2C01FD2F78E0021DC5A /* Main.storyboard in Resources */,
@@ -330,9 +349,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StoryboardsAndDatasources/Pods-StoryboardsAndDatasources-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TTGSnackbar/TTGSnackbar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTGSnackbar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -346,8 +372,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD864661FD304DD00DD4975 /* FeedCollectionViewDatasource.swift in Sources */,
 				CF72C2DD1FD2F84D0021DC5A /* APIHandler.swift in Sources */,
 				CF72C2BD1FD2F78E0021DC5A /* ViewController.swift in Sources */,
+				CFD864631FD304DD00DD4975 /* FeedCollectionViewCell.swift in Sources */,
+				CFD864651FD304DD00DD4975 /* FeedCollectionViewFooter.swift in Sources */,
+				CFD864641FD304DD00DD4975 /* Feed.swift in Sources */,
+				CFD864621FD304DD00DD4975 /* FeedViewController.swift in Sources */,
 				CF72C2BB1FD2F78E0021DC5A /* AppDelegate.swift in Sources */,
 				CF72C2DF1FD2F84D0021DC5A /* NetworkHandler.swift in Sources */,
 			);

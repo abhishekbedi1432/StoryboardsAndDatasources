@@ -13,6 +13,16 @@ class FeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    
+    private func reset() {
+        titleLabel.text = nil
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        reset()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         progressView.transform = CGAffineTransform(scaleX: 1.0, y: 3.0)
@@ -21,6 +31,6 @@ class FeedCollectionViewCell: UICollectionViewCell {
         imageView.layer.borderWidth = 1.0
         imageView.layer.cornerRadius = 5.0
         
-        titleLabel.text = nil
+        reset()
     }
 }

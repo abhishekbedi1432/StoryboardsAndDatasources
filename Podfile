@@ -10,7 +10,7 @@ target 'StoryboardsAndDatasources' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'TTGSnackbar', '~> 1.7'
   pod 'Kingfisher', '~> 4.3'
-  pod 'Alamofire', '~> 4.5'
+  #pod 'Alamofire', '~> 4.5'
 
   target 'StoryboardsAndDatasourcesTests' do
     inherit! :search_paths

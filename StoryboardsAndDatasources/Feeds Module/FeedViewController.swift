@@ -13,20 +13,20 @@ import Kingfisher
 
 class FeedViewController: UIViewController {
 
-    @IBOutlet weak var datasource: FeedCollectionViewDatasource!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewDatasource: FeedCollectionViewDatasource!
     
-    lazy var apiHandler:APIHandler = APIHandler()
+    private var apiHandler:APIHandler = APIHandler()
 
     deinit {
         print("Deinit called")
     }
     
     fileprivate func setupCollectionViewDatasource() {
-        datasource.OnItemSelection = { item in
+        collectionViewDatasource.OnItemSelection = { item in
             print("\(String(describing: item.title)) ")
         }
-        datasource.willDisplayFooter = {
+        collectionViewDatasource.willDisplayFooter = {
             self.loadFeed()
         }
     }
@@ -84,7 +84,7 @@ class FeedViewController: UIViewController {
                     let feed = Feed(json: item)
                     feeds.append(feed)
                 }
-                strongSelf.datasource.configure(strongSelf.collectionView, items:feeds)
+                strongSelf.collectionViewDatasource.configure(strongSelf.collectionView, items:feeds)
             }
             
         }
